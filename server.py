@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask
 from data import db_session
 from data.user import User
@@ -27,4 +29,5 @@ def index():
 
 
 if __name__ == '__main__':
-    main()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
