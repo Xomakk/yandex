@@ -21,5 +21,10 @@ def main():
     app.run()
 
 
+@app.route('/')
+def index():
+    return 'hello world!'
+
+
 if __name__ == '__main__':
     main()
